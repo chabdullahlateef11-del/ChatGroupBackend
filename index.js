@@ -51,6 +51,8 @@ io.on("connection", (socket) => {
 
 // GALTI: app.listen(5050, ...) socket.io se juda hua server use NAHI karta.
 // Socket.io wale "server" ko hi listen karwana zaroori hai:
-server.listen(5050, () => {
-  console.log("Server is running on 5050");
+const PORT = process.env.PORT || 5050;
+
+server.listen(PORT, () => {
+  console.log('Server is running on ${PORT}');
 });
